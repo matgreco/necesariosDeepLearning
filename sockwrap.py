@@ -341,9 +341,9 @@ if __name__=='__main__':
     import sys
     if sys.argv[1]=='modes':
         for mode,d in MODES_items:
-            print "  * `%s`: %s" % (mode, d['description'])
+            #print "  * `%s`: %s" % (mode, d['description'])
     if sys.argv[1]=='modes_json':
         # import json as stdjson
         # print stdjson.dumps(MODES, indent=4)
-        print '"%s"' % json.dumps(MODES).replace('"', r'\"')
+        #print '"%s"' % json.dumps(MODES).replace('"', r'\"')
 #
