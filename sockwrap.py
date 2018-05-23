@@ -342,7 +342,7 @@ if __name__=='__main__':
 	a = 0
     if sys.argv[1]=='modes':
         for mode,d in MODES_items:
-            a = 0
+			a = 0
 			#print("  * `%s`: %s" % (mode, d['description']))
     if sys.argv[1]=='modes_json':
         # import json as stdjson
