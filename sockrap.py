@@ -1,4 +1,3 @@
-
 """
 Client and process monitor for the java socket server.
 """
@@ -248,7 +247,7 @@ class CoreNLP:
                 LOG.warning("Bad JSON length %d, starts with: %s" % (len(data), repr(data[:1000])))
                 return None
             return decoded
-        except socket.timeout, e:
+        except socket.timeout:
             LOG.info("Socket timeout happened, returning None: %s %s" % (type(e), e))
             return None
             # This is tricky. maybe the process is running smoothly but just
@@ -326,7 +325,7 @@ def test_paths():
 def assert_no_java(msg=""):
     ps_output = os.popen("ps wux").readlines()
     javalines = [x for x in ps_output if re.search(r'\bbin/java\b', x)]
-    print ''.join(javalines)
+    #print ''.join(javalines)
     assert len(javalines) == 0, msg
 
 # def test_doctimeout():
@@ -347,3 +346,4 @@ if __name__=='__main__':
         # import json as stdjson
         # print stdjson.dumps(MODES, indent=4)
         print '"%s"' % json.dumps(MODES).replace('"', r'\"')
+#
