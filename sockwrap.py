@@ -339,14 +339,14 @@ def assert_no_java(msg=""):
 
 if __name__=='__main__':
     import sys
-	a = 0
+    a = 0
     if sys.argv[1]=='modes':
         for mode,d in MODES_items:
-			a = 0
-			#print("  * `%s`: %s" % (mode, d['description']))
+            a = 0
+            #print("  * `%s`: %s" % (mode, d['description']))
     if sys.argv[1]=='modes_json':
         # import json as stdjson
         # print stdjson.dumps(MODES, indent=4)
         #print '"%s"' % json.dumps(MODES).replace('"', r'\"')
-		a = 0
+        a = 0
 #
